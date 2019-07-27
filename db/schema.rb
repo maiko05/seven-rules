@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_102843) do
+ActiveRecord::Schema.define(version: 2019_07_27_062118) do
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "rule_id"
-    t.bigint "user_id"
+    t.bigint "rule_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["rule_id"], name: "index_likes_on_rule_id"
@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(version: 2019_07_26_102843) do
   create_table "rules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "rule1"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.text "rule2"
     t.text "rule3"
     t.text "rule4"
     t.text "rule5"
     t.text "rule6"
     t.text "rule7"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer "user_id"
     t.integer "likes_count"
   end
