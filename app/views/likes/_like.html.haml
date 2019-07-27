@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title SevenRules
+    = csrf_meta_tags
+    = csp_meta_tag
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %script{:crossorigin => "anonymous", :integrity => "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+
+  %div.like-link{id: "like-link-#{rule.id}"}
+    - if current_user.likes.find_by(rule_id: rule.id)
+      = link_to rule_likes_path(rule.id), method: :delete, remote: true do
+        .btn.btn-default.glyphicon.glyphicon-heart{id: "heart-#{rule.id}"}
+          = rule.likes.count.to_s
+    - else
+      = link_to rule_likes_path(rule.id), method: :post, remote: true do
+        .btn.btn-default.glyphicon.glyphicon-heart-empty{id: "heart-#{rule.id}"}
+          = rule.likes.count.to_s

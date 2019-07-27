@@ -1,0 +1,23 @@
+.contents.row
+  .container
+    = form_tag('/rules', method: :post) do
+      %h3
+        投稿する
+      %p
+        %textarea{:cols => "10", :name => "name", :placeholder => "name", :rows => "1"}
+      %p
+        %textarea{:cols => "20", :name => "rule1", :placeholder => "text", :rows => "1"} ①
+      %p
+        %textarea{:cols => "20", :name => "rule2", :placeholder => "text", :rows => "1"} ②
+      %p
+        %textarea{:cols => "20", :name => "rule3", :placeholder => "text", :rows => "1"} ③
+      %p
+        %textarea{:cols => "20", :name => "rule4", :placeholder => "text", :rows => "1"} ④
+      %p
+        %textarea{:cols => "20", :name => "rule5", :placeholder => "text", :rows => "1"} ⑤
+      %p
+        %textarea{:cols => "20", :name => "rule6", :placeholder => "text", :rows => "1"} ⑥
+      %p
+        %textarea{:cols => "20", :name => "rule7", :placeholder => "text", :rows => "1"} ⑦
+      %p
+        %input.btn.btn-info.btn-lg{:role => "button", :type => "submit", :value => "SENT"}/

@@ -1,0 +1,32 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    / viewport meta
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    / Bootstrap CSS
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700", :rel => "stylesheet"}/
+  %body
+    .container-fluid
+      %main.container.contents
+        .parent
+          - @rules.each do |rule|
+            .col-md-4
+              .card
+                %img.card-img{:alt => "Card image", :src => "https://images.pexels.com/photos/1007025/pexels-photo-1007025.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"}/
+                .card-img-overlay
+                  .card_header
+                    = simple_format(rule.name)
+                  .card_content
+                    = simple_format(rule.rule1)
+                    = simple_format(rule.rule2)
+                    = simple_format(rule.rule3)
+                    = simple_format(rule.rule4)
+                    = simple_format(rule.rule5)
+                    = simple_format(rule.rule6)
+                    = simple_format(rule.rule7)
+                  = render partial: "likes/like", locals: { rule: rule, like: @like }
+
+      = paginate(@rules)

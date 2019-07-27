@@ -1,0 +1,46 @@
+// Place all the styles related to the rules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  .container-fluid {
+    // padding: 0px;
+    // margin: 0px; 
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+    height: 100vh;
+    min-height: 300px;
+    background-image: url("https://images.pexels.com/photos/414660/pexels-photo-414660.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // .contents {
+    //   max-width: 990px;
+    //   margin: 0 auto;
+    // }
+    .parent {
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+    .card {
+      margin-top: 10px;
+      height: 345px;
+    .card-img {
+      height: 345px;
+
+      .card_header {
+        padding: 0px 20px;
+        text-decoration: underline;
+      }
+      .card_content {
+        font-size: 15px;
+        color: black;
+      }
+    }
+    }
+  } 
+}

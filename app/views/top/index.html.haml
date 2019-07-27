@@ -1,0 +1,28 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    / viewport meta
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    / Bootstrap CSS
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700", :rel => "stylesheet"}/
+    %link{:href => "css/social-buttons.css", :rel => "stylesheet"}/
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+
+
+  %body
+    .jumbotron
+      .jumbotron.jumbotron-extend
+        .top-container-fluid.jumbotron-container
+          %h1.site-name Seven rules
+          %p
+            %a.btn.btn-info.btn-lg{:href => "/rules/new", :role => "button"} ルールを作成する
+          %p
+            %a.btn.btn-info.btn-lg{:href => "/rules", :role => "button"} みんなのルールを見る
+
+          %button.btn.btn-facebook
+            %i.fa.fa-facebook
+            | Connect with Facebook
+          
