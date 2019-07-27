@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   # get  'rules' => 'rules#index'
   # get  'rules/new' => 'rules#new'
   # post 'rules' => 'rules#create'
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+  
   resources :users, only: [:edit, :update] do
     resources :likes, only: [:create, :destroy]
   end
