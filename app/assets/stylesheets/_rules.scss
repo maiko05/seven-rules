@@ -9,7 +9,7 @@ body {
     background-size: cover;
     z-index: 0;
     position: relative;
-    height: 100vh;
+    height: 100%;
     min-height: 300px;
     background-image: url("https://images.pexels.com/photos/414660/pexels-photo-414660.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-position: center center;
@@ -27,11 +27,12 @@ body {
       box-sizing: border-box;
     }
     .card {
-      margin-top: 10px;
-      height: 345px;
+      margin-top: 20px;
+      height: 360px;
     .card-img {
-      height: 345px;
-
+      height: 360px;
+    }
+    .card-img-overlay
       .card_header {
         padding: 0px 20px;
         text-decoration: underline;
@@ -40,7 +41,6 @@ body {
         font-size: 15px;
         color: black;
       }
-    }
     }
   } 
 }

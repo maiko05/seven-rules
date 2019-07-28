@@ -1,1 +1,2 @@
-$("#like-buttons").html("<%= j(render partial: 'like', locals: { rules: @rules, likes: @likes }) %>");
+var rule_id = <%= @rule.id %>
+$(`#like-link-${rule_id}`).html("<%= j(render partial: 'like', locals: { rule: @rule, likes: @likes }) %>");

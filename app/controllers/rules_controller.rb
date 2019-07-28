@@ -4,7 +4,7 @@ class RulesController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def index
-    @rules = Rule.order("created_at DESC").page(params[:page]).per(6)
+    @rules = Rule.order("created_at DESC").page(params[:page]).per(4)
     # @rules = Rule.includes(:user).page(params[:page]).per(5).order("created_at DESC")
     @like = Like.new
   end
