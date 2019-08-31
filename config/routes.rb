@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get  'rules/new' => 'rules#new'
   # post 'rules' => 'rules#create'
   
-  resources :users, only: [:edit, :update] do
+  resources :users, only: [:edit, :update, :destroy] do
     resources :likes, only: [:create, :destroy]
   end
   resources :rules do
