@@ -1,0 +1,24 @@
+.contents.row
+  .container
+    = form_tag("/rules/#{@rule.id}", method: :patch) do
+      %h3
+        my seven rules
+      %p
+        %textarea{:cols => "10", :name => "name", :placeholder => "name", :rows => "1"}= @rule.name
+      %p
+        %i.fas.fa-pen
+        %textarea{:cols => "20", :name => "rule1", :placeholder => "rule 1", :rows => "1"}= @rule.rule1
+      %p
+        %textarea{:cols => "20", :name => "rule2", :placeholder => "rule 2", :rows => "1"}= @rule.rule2
+      %p
+        %textarea{:cols => "20", :name => "rule3", :placeholder => "rule 3", :rows => "1"}= @rule.rule3
+      %p
+        %textarea{:cols => "20", :name => "rule4", :placeholder => "rule 4", :rows => "1"}= @rule.rule4
+      %p
+        %textarea{:cols => "20", :name => "rule5", :placeholder => "rule 5", :rows => "1"}= @rule.rule5
+      %p
+        %textarea{:cols => "20", :name => "rule6", :placeholder => "rule 6", :rows => "1"}= @rule.rule6
+      %p
+        %textarea{:cols => "20", :name => "rule7", :placeholder => "rule 7", :rows => "1"}= @rule.rule7
+      %p
+        %input.btn.btn-info.btn-lg{:role => "button", :type => "submit", :value => "SENT"}/

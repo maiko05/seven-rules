@@ -21,6 +21,6 @@
                 .card_footer__likes
                   = render partial: "likes/like", locals: { rule: rule, like: @like }
                 .card_footer__edit
-                  = link_to "編集"
+                  = link_to "編集","/rules/#{rule.id}/edit", method: :get
                   = link_to "削除","/rules/#{rule.id}", method: :delete
   = paginate(@rules)

@@ -30,11 +30,19 @@ class RulesController < ApplicationController
     @rule = Rule.find(params[:id])
   end
 
-  def destroy
-    @rule = Rule.find(params[:id])
+  def update
+    rule = Rule.find(params[:id])
     if rule.user_id == current_user.id
-    @rule.destroy
-    redirect_to action: :index
+      rule.update(rule_params)
+      redirect_to action: :index
+    end
+  end
+
+  def destroy
+    rule = Rule.find(params[:id])
+    if rule.user_id == current_user.id
+      rule.destroy
+      redirect_to action: :index
     end
   end
 
